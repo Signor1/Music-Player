@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Music Player</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<link href="css/player.css" rel="stylesheet" type="text/css"/>
+	<link href="fontawesome/css/all.min.css" rel="stylesheet" type="text/css"/>
+	<link href="fontawesome/css/fontawesome.min.css" rel="stylesheet" type="text/css"/>
+
+</head>
+<body>
+
+	<div class="container">
+		<div class="img-container">
+			<img src="img/about2.jpg" alt="music-image">
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<div class="box"></div>
+			<h1 class="logo">Signor <span class="span">Music<span></h1>
+		</div>
+
+		<div class="music-container">
+			<div class="wrapper">
+				<div class="details">
+					<div class="now-playing">PLAYING X OF Y</div>
+					<div class="track-art"></div>
+					<div class="track-name">Track Name</div>
+					<div class="track-artist">Track Artist</div>
+				</div>
+
+
+				<div class="slider_container">
+					<div class="current-time">00:00</div>
+					<input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+					<div class="total-duration">00:00</div>
+				</div>
+
+
+				<div class="slider_container">
+					<i class="fa fa-volume-down"></i>
+					<input type="range" min="1" max="100" value="99" class="volume_slider" onchange="setVolume()">
+					<i class="fa fa-volume-up"></i>
+				</div>
+
+				<div class="buttons">
+					<div class="random-track" onclick="randomTrack()">
+						<i class="fas fa-random fa-2x" title="Random"></i>
+					</div>
+					<div class="prev-track" onclick="prevTrack()">
+						<i class="fa fa-step-backward fa-2x" title="Previous"></i>
+					</div>
+					<div class="playpause-track" onclick="playpauseTrack()">
+						<i class="fa fa-play-circle fa-5x" title="Play/Pause"></i>
+					</div>
+					<div class="next-track" onclick="nextTrack()">
+						<i class="fa fa-step-forward fa-2x" title="Next"></i>
+					</div>
+					<div class="repeat-track" onclick="repeatTrack()">
+						<i class="fa fa-redo fa-2x" title="Repeat"></i>
+					</div>
+				</div>
+
+
+
+			</div>
+		</div>
+
+	</div>
+<script type="text/javascript" src="js/player.js"></script>
+</body>
+
+</html>
